@@ -109,7 +109,7 @@ var travel = (function () {
                                         <span class="location"></span>
                                         ${data[i].Add}
                                     </div>
-                                    <div class="d-flex">
+                                    <div class="d-flex mb-2">
                                         <div class="mr-auto" style="display: inline-block">
                                             <span class="phone"></span>
                                             ${data[i].Tel}
@@ -117,6 +117,16 @@ var travel = (function () {
                                         <div style="display: inline-block">
                                             <span class="ticket"></span>
                                             ${data[i].Ticketinfo}
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#${data[i].Id}" aria-expanded="false">
+                                            查看更多
+                                        </button>
+                                    </div>
+                                    <div class="collapse" id="${data[i].Id}">
+                                        <div class="card card-body">
+                                            ${data[i].Description}
                                         </div>
                                     </div>
                                 </div>
