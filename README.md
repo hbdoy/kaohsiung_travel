@@ -6,7 +6,9 @@
 
 ## 使用技術
 HTML、CSS: 外觀使用 ``bootstrap4``
+
 JS: 主要練習純 JS，只有小地方使用 ``Jquery``
+
 分頁: 使用 ``pagination.js``
 
 ## URL
