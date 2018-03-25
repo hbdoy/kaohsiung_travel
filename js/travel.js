@@ -142,7 +142,7 @@ var travel = (function () {
     function init() {
         _getData();
         _eventBind();
-        console.log("init");
+        // console.log("init");
     }
 
     return {
