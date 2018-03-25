@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="高雄觀光景點資訊">
+    <meta name="keywords" content="高雄,觀光,景點,好玩">
+    <meta name="author" content="hbdoy">
+    <!-- 若有任何侵權請與我聯繫 -->
+    <!-- email: felicity860128@gmail.com -->
+    <title>高雄旅遊資訊</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favor.png">
+</head>
+
+<body>
+    <header id="bgImg">
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col-12 pt-5 text-center mb-4">
+                    <h1 class="header_h1">高雄旅遊資訊</h1>
+                </div>
+                <div class="col-md-6 mx-auto mt-5">
+                    <form>
+                        <select class="form-control header_select py-0" id="zone_select">
+                            <option value="all" selected>--請選擇行政區--</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-5" style="position: relative">
+        <div class="container pt-5">
+            <div class="row justify-content-center">
+                <div id="hot" class="d-none d-sm-block col-md-10 bg-white py-3">
+                    <div class="mb-3">熱門行政區</div>
+                    <button class="btn px-4 ml-md-4 mr-4" id="hot_item1">前鎮區</button>
+                    <button class="btn px-4 mr-4" id="hot_item2">苓雅區</button>
+                    <button class="btn px-4 mr-4" id="hot_item3">三民區</button>
+                    <button class="btn px-4" id="hot_item4">新興區</button>
+                </div>
+            </div>
+            <div class="pt-md-4">
+                <hr class="mb-5">
+            </div>
+            <div class="row">
+                <div class="col-12 text-center pt-4">
+                    <h2 id="zone_header"></h2>
+                </div>
+            </div>
+            <div class="row my-3" id="result_cards"></div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <div id="myPagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center">
+        <div class="mb-1" style="color: white">高雄旅遊網</div>
+        <div style="color: #FFD366">資料來源: 高雄市政府</div>
+    </footer>
+
+    <!-- 回到頂端 -->
+    <div class="goTop"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/pagination.min.js"></script>
+    <script src="js/travel.js"></script>
+    <script>
+        $(document).ready(function () {
+            travel.init();
+
+            // 回到頂端
+            $(window).scroll(function () {
+                // 向下滾動數值大於該值時，即出現箭頭圖案
+                if ($(window).scrollTop() >= 100) {
+                    // 淡入: 越小出現越快
+                    $('.goTop').fadeIn(300);
+                } else {
+                    // 淡出: 越小消失越快
+                    $('.goTop').fadeOut(300);
+                }
+            });
+            $('.goTop').click(function () {
+                // 箭頭停留時間: 越小消失的越快
+                $('html,body').animate({
+                    scrollTop: '0px'
+                }, 800);
+            });
+        });
+    </script>
+</body>
+
+</html>

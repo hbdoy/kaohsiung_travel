@@ -1,0 +1,190 @@
+body {
+    font-family: "微軟正黑體";
+}
+
+#bgImg {
+    background-image: url("../img/Hero.png");
+    background-size: cover;
+    background-position: center 15%;
+    min-height: 380px;
+}
+
+.header_h1 {
+    font-family: "PingFangTC-Regular";
+    color: #FFFFFF;
+    font-weight: bold;
+    letter-spacing: 3.89px;
+}
+
+.header_select {
+    /*移除箭頭樣式*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /*改變右邊箭頭樣式*/
+    background-image: url("../img/icons_down.png");
+    background-repeat: no-repeat;
+    background-position: 98% center;
+    background-color: rgba(255, 255, 255, 0.70);
+    border: 3px solid #FFFFFF;
+    border-radius: 3px;
+    color: black;
+}
+
+section{
+    background: rgb(235, 235, 235);
+}
+
+section hr {
+    border: 1px dashed #559AC8;
+    position: relative;
+}
+
+section hr::after {
+    content: "";
+    background-image: url("../img/circle-with-a-down-arrow.png");
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 49%;
+    width: 24px;
+    height: 24px;
+    background-color: rgb(235, 235, 235);
+}
+
+section .card-img-top {
+    height: 155px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.openTime {
+    background-image: url("../img/icons_clock.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+}
+
+.location {
+    background-image: url("../img/icons_pin.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    /* vertical-align: text-bottom; */
+}
+
+.phone {
+    background-image: url("../img/icons_phone.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    /* vertical-align: text-bottom; */
+}
+
+.ticket {
+    background-image: url("../img/icons_tag.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    /* vertical-align: text-bottom; */
+}
+
+section .card-title {
+    /* 讓文字往上移動到圖片中 */
+    margin-top: -75px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+section .card-title h4,
+section .card-title div {
+    color: white;
+    font-weight: bold;
+}
+
+section .card_zone_text {
+    display: inline-block;
+    line-height: 36px;
+}
+
+footer {
+    background: #559AC8;
+    font-size: 14px;
+}
+
+/* 向上圖示 */
+
+.goTop {
+    background-image: url("../img/btn_goTop.png");
+    width: 24px;
+    height: 24px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+/* 分頁外觀 */
+
+.paginationjs-page a,
+.paginationjs-prev a,
+.paginationjs-next a {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.paginationjs-prev a {
+    margin-left: 0;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.paginationjs-next a {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+#hot {
+    position: absolute;
+    top: -20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#hot .btn{
+    color: white;
+    font-size: 20px;
+}
+
+#hot_item1 {
+    background: #8A82CC;
+}
+
+#hot_item2 {
+    background: #FFA782;
+}
+
+#hot_item3 {
+    background: #F5D105;
+}
+
+#hot_item4 {
+    background: #559AC8;
+}
